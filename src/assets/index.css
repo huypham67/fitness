@@ -1,0 +1,54 @@
+:root {
+  --primary-color: #F15637;
+  --secondary-color: #FBA840;
+  --light-gray: #efeff0;
+  --dark-gray: #2f2f2f;
+  --medium-gray: #b6b6b6;
+  --white: #ffffff;
+  --max-width: 1366px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark-gray);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global styles for Ant Design overrides */
+.ant-btn-primary {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  border: none;
+}
+
+.ant-btn-primary:hover {
+  background: linear-gradient(to right, var(--primary-color), var(--primary-color));
+}
+
+/* For sticky navbar effect */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero section gradient */
+.hero-gradient {
+  background-image: linear-gradient(to right, rgba(241, 86, 55, 0.85), rgba(251, 168, 64, 0.85));
+} 
