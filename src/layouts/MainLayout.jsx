@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Layout } from 'antd';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
-import LoginModal from '../components/common/Modal/LoginModal';
+import LoginModal from '../features/auth/components/LoginModal';
 import styled from 'styled-components';
 
 const { Content } = Layout;
@@ -30,8 +30,9 @@ const MainLayout = ({ children }) => {
       </StyledContent>
       <Footer />
       <LoginModal
-        visible={isLoginModalVisible}
-        onCancel={hideLoginModal}
+        open={isLoginModalVisible}
+        onClose={hideLoginModal}
+        onRegister={() => {/* handle register click */}}
       />
     </Layout>
   );
